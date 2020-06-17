@@ -1,0 +1,25 @@
+{
+  "name": "debug-react-source-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "serve": "serve build",
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Terry-Su/debug-react-source-code.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Terry-Su/debug-react-source-code/issues"
+  },
+  "homepage": "https://github.com/Terry-Su/debug-react-source-code#readme",
+  "devDependencies": {
+    "serve": "^11.3.2"
+  }
+}
