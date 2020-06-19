@@ -1,5 +1,0 @@
-const IDENTITY_STR = '$$TS_DEBUG_REACT_SOURCE_CODE'
-module.exports.IDENTITY_STR = IDENTITY_STR
-module.exports.IDENTITY_START_STR = `${IDENTITY_STR} START`
-module.exports.IDENTITY_END_STR = `${IDENTITY_STR} END`
-module.exports.ANNOTATION_PREFIX = `// `

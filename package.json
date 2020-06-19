@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "serve": "serve build",
-    "test": "node test/test.js"
+    "start": "http-server -p 6000"
   },
   "repository": {
     "type": "git",
@@ -20,7 +18,6 @@
   },
   "homepage": "https://github.com/Terry-Su/debug-react-source-code#readme",
   "devDependencies": {
-    "serve": "^11.3.2",
-    "trash": "^6.1.1"
+    "http-server": "^0.12.3"
   }
 }
