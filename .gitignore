@@ -1,7 +1,4 @@
-PLACE-REACT-SOURCE-CODE-HERE/*
-!PLACE-REACT-SOURCE-CODE-HERE/PLACEHOLDER_FOR_GITIGNORE.md
-
-build
+/node_modules
 
 # Logs
 logs
@@ -43,7 +40,7 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
+# node_modules/
 jspm_packages/
 
 # TypeScript v1 declaration files
