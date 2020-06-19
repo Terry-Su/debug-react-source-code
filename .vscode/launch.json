@@ -12,7 +12,8 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/test/test.js",
+            "program": "${workspaceFolder}/index.js",
+            // "program": "${workspaceFolder}/test/test.js",
             "cwd": "${workspaceFolder}/PLACE-REACT-SOURCE-CODE-HERE"
         }
     ]

@@ -1,14 +1,21 @@
 const fs = require('fs')
 const path = require(`path`)
+const trash = require(`trash`)
 const { spawn, exec } = require('child_process')
 const {IDENTITY_START_STR, IDENTITY_END_STR, ANNOTATION_PREFIX} = require('./shared.js')
 
 const PATH_PLUGIN = path.resolve(__dirname, 'rollup-plugin-add-path-info-annoation-for-each-file.js').replace(/\\/g, '/')
-const PATH_BUILD = path.resolve(__dirname, 'build').replace(/\\/g, '/')
 const PATH_DEPENDENCIES = path.resolve(__dirname, 'dependencies').replace(/\\/g, '/')
+const PATH_BUILD = path.resolve(__dirname, 'build').replace(/\\/g, '/')
 
 
-const PATH_REACT = path.resolve(__dirname, 'PLACE-REACT-SOURCE-CODE-HERE').replace(/\\/g, '/')
+const PATH_REACT_CONTAINER = path.resolve(__dirname, 'PLACE-REACT-SOURCE-CODE-HERE').replace(/\\/g, '/')
+const dirs = fs.readdirSync(PATH_REACT_CONTAINER).filter(v => fs.lstatSync( path.resolve(PATH_REACT_CONTAINER, v).replace(/\\/g, '/') ).isDirectory())
+if (dirs.length === 0) { throw new Error('No React Source Code Directory Found!') }
+const PATH_REACT = path.resolve(PATH_REACT_CONTAINER, dirs[0]).replace(/\\/g, '/')
+const PATH_BUILD_REACT = path.resolve(PATH_BUILD, path.basename(PATH_REACT).replace(/\.js/, '')).replace(/\\/g, '/')
+
+
 const PATH_REACT_NODE_MODULES = path.resolve(PATH_REACT, 'node_modules').replace(/\\/g, '/')
 const PATH_REACT_ROLLUP_BUILD_JS = path.resolve(PATH_REACT, 'scripts/rollup/build.js').replace(/\\/g, '/')
 const PATH_NEW_REACT_ROLLUP_BUILD_JS = path.resolve(PATH_REACT, 'scripts/rollup/build.for-debug-react-code.js').replace(/\\/g, '/')
@@ -34,7 +41,7 @@ function generateNewBuildJS() {
     const lines = buildJsStr.split('\n')
     const newFistLine = `const ${NAME_PLUGIN} = require('${RELATIVE_PATH_NEW_REACT_ROLLUP_BUILD_JS_TO_PLUGIN}');\n`
     newBuildJsStr = newFistLine + lines.map(line => {
-        if (line.match(/if \(isWatchMode\)/)) {
+        if (line.match(/rollup\(/)) {
             return `rollupConfig.plugins.push(${NAME_PLUGIN}('${PATH_REACT}'));
     ${line}`
         }
@@ -52,11 +59,12 @@ function installDependencies(cb) {
 
 function build(cb) {
     const ls = spawn('node', [TMP, `react/index,react-dom/index`, `--type`, `UMD_DEV`], {cwd: PATH_REACT})
+    // const ls = spawn('node', [TMP], {cwd: PATH_REACT})
     ls.stdout.on('data', data => console.log(data.toString()))
     ls.stderr.on('data', data => console.log(data.toString()))
     ls.on('close', () => {
         console.log(`$$ DEBUG REACT SOURCE CODE: generated react.development.js and react-dom.development.js!`)
-        cb()
+        cb && cb()
     })
 }
 
@@ -71,14 +79,14 @@ function getReactOrReactDOMNamespace(reactOrReactDOMDevelopmentFile) {
  * @return {{outputFile, text}[]}
  */
 function getReactOrReactDOMSplitFilesData(reactOrReactDOMDevelopmentFile) {
-    const getFileOnEndLine = (line, lineIndex) => {
+    const getFileOnEndLine = (line) => {
         const isSpecialFormat = /commonjs-proxy-/.test( line )
 
         if ( isSpecialFormat ) {
-          let path = line.replace( /.*commonjs-proxy-/, '' )
-          path = PATH.relative( PATH_REACT, path ).replace(/\\/g,'/')
+          let tmpPath = line.replace( /.*commonjs-proxy-/, '' )
+          tmpPath = path.relative( PATH_REACT, tmpPath ).replace(/\\/g,'/')
           
-          return `commonjs-proxy-/${ path }`
+          return `commonjs-proxy-/${ tmpPath }`
           // return path
         }
         return line.replace( new RegExp(`.*${ANNOTATION_PREFIX.replace('/', '\\/')}${IDENTITY_END_STR.replace(/\$/g, '\\$')} `), '' )
@@ -137,7 +145,7 @@ function getReactOrReactDOMSplitFilesData(reactOrReactDOMDevelopmentFile) {
 function generateReactOrReactDOMSplitFiles(filesData, reactOrReactDOMDevelopmentFile) {
     for (let {outputFile, text} of filesData) {
         const folderName = path.parse(reactOrReactDOMDevelopmentFile).name
-        const targetPath = path.resolve(PATH_BUILD, `${folderName}/${outputFile}`)
+        const targetPath = path.resolve(PATH_BUILD_REACT, `${folderName}/${outputFile}`)
         const folerPath = path.dirname(targetPath)
         !fs.existsSync(folerPath) && fs.mkdirSync(folerPath, {recursive: true})
         fs.writeFileSync(targetPath, text, {encoding: 'utf-8'})
@@ -153,7 +161,7 @@ function copyDependencies() {
     ]
     for (let file of dependencyPaths) {
         const filename = path.parse(file).base.replace(/^source-/, '')
-        const targetPath = path.resolve(PATH_BUILD, filename)
+        const targetPath = path.resolve(PATH_BUILD_REACT, filename)
         fs.copyFileSync(file, targetPath)
     }
 }
@@ -176,7 +184,7 @@ function generateDependencyReactDOMHTML(reactDOMFilesData, reactDOMFile) {
     <body>
     </body>
     </html>`
-    const targetPath = path.resolve(PATH_BUILD, NAME_DEPENDENCY_REACT_DOM)
+    const targetPath = path.resolve(PATH_BUILD_REACT, NAME_DEPENDENCY_REACT_DOM)
     fs.writeFileSync(targetPath, text, {encoding: 'utf-8'})
 }
 
@@ -203,12 +211,31 @@ function generateDependencyReactHTML(reactFilesData, reactFile) {
         </script>
     </body>
     </html>`
-    const targetPath = path.resolve(PATH_BUILD, NAME_DEPENDENCY_REACT)
+    const targetPath = path.resolve(PATH_BUILD_REACT, NAME_DEPENDENCY_REACT)
     fs.writeFileSync(targetPath, text, {encoding: 'utf-8'})
 }
 
+async function takeOnReactReactDOMFiles() {
+    await trash(PATH_BUILD_REACT)
+    const PATH_REACT_DEVELOPMENT = path.resolve(PATH_REACT, `build/node_modules/react/umd/react.development.js`)
+    const PATH_REACT_DOM_DEVELOPMENT = path.resolve(PATH_REACT, `build/node_modules/react-dom/umd/react-dom.development.js`)
+    
+    const reactFilesData = getReactOrReactDOMSplitFilesData(PATH_REACT_DEVELOPMENT)
+    generateReactOrReactDOMSplitFiles(reactFilesData, PATH_REACT_DEVELOPMENT)
+    generateDependencyReactHTML(reactFilesData, PATH_REACT_DEVELOPMENT)
+    
+    const reactDOMFilesData = getReactOrReactDOMSplitFilesData(PATH_REACT_DOM_DEVELOPMENT)
+    generateReactOrReactDOMSplitFiles(reactDOMFilesData, PATH_REACT_DOM_DEVELOPMENT)
+    generateDependencyReactDOMHTML(reactDOMFilesData, PATH_REACT_DOM_DEVELOPMENT)
+
+    copyDependencies() 
+    console.log(`$$ DEBUG REACT SOURCE CODE: built ${path.parse(PATH_BUILD_REACT).name} to ${PATH_BUILD_REACT}!`)
+}
 
 
+generateNewBuildJS();installDependencies( () => build( takeOnReactReactDOMFiles ))
+// build()
+// takeOnReactReactDOMFiles()
 
 
 module.exports.getReactOrReactDOMSplitFilesData = getReactOrReactDOMSplitFilesData

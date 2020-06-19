@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Terry-Su/debug-react-source-code#readme",
   "devDependencies": {
-    "serve": "^11.3.2"
+    "serve": "^11.3.2",
+    "trash": "^6.1.1"
   }
 }
