@@ -1,0 +1,3 @@
+  var PLUGIN_EVENT_SYSTEM = 1;
+  var IS_REPLAYED = 1 << 5;
+  var IS_FIRST_ANCESTOR = 1 << 6;
