@@ -1,0 +1,3 @@
+var Dispatcher = {
+  readContext: readContext
+};

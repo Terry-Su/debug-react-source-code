@@ -8,8 +8,8 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "http://localhost:6000",
-            "webRoot": "${workspaceFolder}"
+            "url": "http://localhost:6002",
+            "webRoot": "${workspaceFolder}/react-16.6.0"
         }
     ]
 }
