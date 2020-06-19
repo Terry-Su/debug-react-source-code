@@ -1,6 +1,8 @@
 PLACE-REACT-SOURCE-CODE-HERE/*
 !PLACE-REACT-SOURCE-CODE-HERE/PLACEHOLDER_FOR_GITIGNORE.md
 
+!example/*/node_modules
+
 build
 
 # Logs
