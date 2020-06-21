@@ -44,4 +44,4 @@ npm start
 
 
 ## 实现原理
-请查看[“另辟蹊径搭建阅读React源码调试环境-支持所有React版本断点调试细分文件”]()
+请查看[“另辟蹊径搭建阅读React源码调试环境-支持所有React版本断点调试细分文件”](https://terry-su.github.io/cn/debug-react-source-code-using-special-method)
