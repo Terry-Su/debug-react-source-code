@@ -7,14 +7,15 @@
 ### （推荐）方法2：下载对应直接调试源码文件
 优势是可修改源码，比如在源码中添加注释。
 使用步骤：
+
 1 . 选择要调试的React版本对应分支,然后点击下载压缩包。
+
+![](https://terry-su.github.io/assets/blogs/debug-react-source-code-in-special-way/switch-branch.png)
+![](https://terry-su.github.io/assets/blogs/debug-react-source-code-in-special-way/download.png)
 
 版本列表（持续更新）：
 * [debug-react-16.13.1](https://github.com/Terry-Su/debug-react-source-code/tree/debug-react-16.13.1)
 *  [debug-react-16.6.0](https://github.com/Terry-Su/debug-react-source-code/tree/debug-react-16.6.0)
-
-![](https://terry-su.github.io/assets/blogs/debug-react-source-code-in-special-way/switch-branch.png)
-![](https://terry-su.github.io/assets/blogs/debug-react-source-code-in-special-way/download.png)
 
 2 . 将压缩包解压后，用vscode打开该文件夹。vscode需安装[Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)插件，用于在vscode对源码添加断点
 
