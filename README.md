@@ -1,3 +1,5 @@
+> 如果这个项目对你有帮助，欢迎**点击Star支持作者**！
+
 ## 快速使用
 ### 方法1: 线上调试
 ![](https://terry-su.github.io/assets/blogs/debug-react-source-code-in-special-way/online-example.png)
