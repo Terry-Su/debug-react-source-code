@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('fs-extra')
 const path = require(`path`)
 const trash = require(`trash`)
 const { spawn, exec } = require('child_process')
@@ -212,6 +212,7 @@ function generateDependencyReactHTML(reactFilesData, reactFile) {
     </body>
     </html>`
     const targetPath = path.resolve(PATH_BUILD_REACT, NAME_DEPENDENCY_REACT)
+    fs.ensureFileSync(targetPath)
     fs.writeFileSync(targetPath, text, {encoding: 'utf-8'})
 }
 
@@ -234,7 +235,7 @@ async function takeOnReactReactDOMFiles() {
 
 
 generateNewBuildJS();installDependencies( () => build( takeOnReactReactDOMFiles ))
-// build()
+// build(takeOnReactReactDOMFiles)
 // takeOnReactReactDOMFiles()
 
 

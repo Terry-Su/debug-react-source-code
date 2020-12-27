@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "serve": "serve build",
+    "serve": "cd build && http-server ",
     "test": "node test/test.js"
   },
   "repository": {
@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/Terry-Su/debug-react-source-code#readme",
   "devDependencies": {
-    "serve": "^11.3.2",
+    "fs-extra": "^9.0.1",
+    "http-server": "^0.12.3",
     "trash": "^6.1.1"
   }
 }
