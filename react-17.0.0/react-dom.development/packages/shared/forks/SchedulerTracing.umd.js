@@ -1,0 +1,11 @@
+  var ReactInternals$2 = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+  var _ReactInternals$Sched$1 = ReactInternals$2.SchedulerTracing,
+      __interactionsRef = _ReactInternals$Sched$1.__interactionsRef,
+      __subscriberRef = _ReactInternals$Sched$1.__subscriberRef,
+      unstable_clear = _ReactInternals$Sched$1.unstable_clear,
+      unstable_getCurrent = _ReactInternals$Sched$1.unstable_getCurrent,
+      unstable_getThreadID = _ReactInternals$Sched$1.unstable_getThreadID,
+      unstable_subscribe = _ReactInternals$Sched$1.unstable_subscribe,
+      unstable_trace = _ReactInternals$Sched$1.unstable_trace,
+      unstable_unsubscribe = _ReactInternals$Sched$1.unstable_unsubscribe,
+      unstable_wrap = _ReactInternals$Sched$1.unstable_wrap;
