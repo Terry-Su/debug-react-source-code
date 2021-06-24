@@ -10,18 +10,16 @@
 优势是可修改源码，比如在源码中添加注释。
 使用步骤：
 
-1 . 选择要调试的React版本对应分支,然后点击下载压缩包。
-
-![](https://terry-su.github.io/assets/blogs/debug-react-source-code-in-special-way/switch-branch.png)
-![](https://terry-su.github.io/assets/blogs/debug-react-source-code-in-special-way/download.png)
+1 . 在[releases](https://github.com/Terry-Su/debug-react-source-code/releases)选择要下载的版本。
+![](https://terry-su.github.io/debug-react-source-code/assets/images/release-download.png)
 
 版本列表（持续更新）：
-* [debug-react-17.0.2](https://github.com/Terry-Su/debug-react-source-code/tree/debug-react-17.0.2)
-* [debug-react-17.0.1](https://github.com/Terry-Su/debug-react-source-code/tree/debug-react-17.0.1)
-* [debug-react-17.0.0](https://github.com/Terry-Su/debug-react-source-code/tree/debug-react-17.0.0)
-* [debug-react-16.14.0](https://github.com/Terry-Su/debug-react-source-code/tree/debug-react-16.14.0)
-* [debug-react-16.13.1](https://github.com/Terry-Su/debug-react-source-code/tree/debug-react-16.13.1)
-*  [debug-react-16.6.0](https://github.com/Terry-Su/debug-react-source-code/tree/debug-react-16.6.0)
+* [debug-react-17.0.2](https://github.com/Terry-Su/debug-react-source-code/releases/tag/release-debug-react-17.0.2)
+* [debug-react-17.0.1](https://github.com/Terry-Su/debug-react-source-code/releases/tag/release-debug-react-17.0.1)
+* [debug-react-17.0.0](https://github.com/Terry-Su/debug-react-source-code/releases/tag/release-debug-react-17.0.0)
+* [debug-react-16.14.0](https://github.com/Terry-Su/debug-react-source-code/releases/tag/release-debug-react-16.14.0)
+* [debug-react-16.13.1](https://github.com/Terry-Su/debug-react-source-code/releases/tag/release-debug-react-16.13.1)
+*  [debug-react-16.6.0](https://github.com/Terry-Su/debug-react-source-code/releases/tag/release-debug-react-16.6.0)
 
 2 . 将压缩包解压后，用vscode打开该文件夹。vscode需安装[Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)插件，用于在vscode对源码添加断点
 
