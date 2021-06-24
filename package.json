@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "http-server -p 6000"
+    "start": "http-server -p 6001"
   },
   "repository": {
     "type": "git",
