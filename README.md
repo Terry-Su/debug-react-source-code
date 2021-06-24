@@ -2,8 +2,8 @@
 
 ## 快速使用
 ### 方法1: 线上调试
-![](https://terry-su.github.io/assets/blogs/debug-react-source-code-in-special-way/online-example.png)
-访问地址：https://terry-su.github.io/debug-react-source-code/example/react-16.13.1
+![](https://terry-su.github.io/debug-react-source-code/example/assets/example-17.0.2.png)
+访问地址：https://terry-su.github.io/debug-react-source-code/example/react-17.0.2
 
 
 ### （推荐）方法2：下载对应直接调试源码文件
