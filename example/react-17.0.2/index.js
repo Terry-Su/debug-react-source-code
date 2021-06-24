@@ -2,7 +2,7 @@ function App() {
     const [count, setCount] = React.useState(0)
     return <div>
         <div>Hello, React Source Code!</div>
-        <div>Number: {0}</div>
+        <div>Number: {count}</div>
         <button onClick={() => setCount(v => v + 1)}>Increment</button>
     </div>
 }
