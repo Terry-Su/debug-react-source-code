@@ -10,7 +10,7 @@
 优势是可修改源码，比如在源码中添加注释。
 使用步骤：
 
-1 . 在[releases](https://github.com/Terry-Su/debug-react-source-code/releases)选择要下载的版本。
+1 . 在[Releases](https://github.com/Terry-Su/debug-react-source-code/releases)中选择要下载的版本。
 ![](https://terry-su.github.io/debug-react-source-code/assets/images/release-download.png)
 
 版本列表（持续更新）：
