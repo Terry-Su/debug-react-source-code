@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dependency React</title>
+        <script>var React = {};</script>
+        <script src="./react.development/packages/shared/ReactVersion.js"></script>
+<script src="./react.development/packages/shared/ReactSymbols.js"></script>
+<script src="./react.development/packages/shared/forks/object-assign.inline-umd.js"></script>
+<script src="./react.development/packages/react/src/ReactCurrentDispatcher.js"></script>
+<script src="./react.development/packages/react/src/ReactCurrentBatchConfig.js"></script>
+<script src="./react.development/packages/react/src/ReactCurrentOwner.js"></script>
+<script src="./react.development/packages/react/src/ReactDebugCurrentFrame.js"></script>
+<script src="./react.development/packages/react/src/IsSomeRendererActing.js"></script>
+<script src="./react.development/packages/react/src/ReactSharedInternals.js"></script>
+<script src="./react.development/packages/shared/consoleWithStackDev.js"></script>
+<script src="./react.development/packages/react/src/ReactNoopUpdateQueue.js"></script>
+<script src="./react.development/packages/react/src/ReactBaseClasses.js"></script>
+<script src="./react.development/packages/react/src/ReactCreateRef.js"></script>
+<script src="./react.development/packages/shared/getComponentName.js"></script>
+<script src="./react.development/packages/react/src/ReactElement.js"></script>
+<script src="./react.development/packages/react/src/ReactChildren.js"></script>
+<script src="./react.development/packages/react/src/ReactContext.js"></script>
+<script src="./react.development/packages/react/src/ReactLazy.js"></script>
+<script src="./react.development/packages/react/src/ReactForwardRef.js"></script>
+<script src="./react.development/packages/shared/ReactFeatureFlags.js"></script>
+<script src="./react.development/packages/shared/isValidElementType.js"></script>
+<script src="./react.development/packages/react/src/ReactMemo.js"></script>
+<script src="./react.development/packages/react/src/ReactBlock.js"></script>
+<script src="./react.development/packages/react/src/ReactHooks.js"></script>
+<script src="./react.development/packages/shared/ConsolePatchingDev.js"></script>
+<script src="./react.development/packages/shared/ReactComponentStackFrame.js"></script>
+<script src="./react.development/packages/shared/checkPropTypes.js"></script>
+<script src="./react.development/packages/react/src/ReactElementValidator.js"></script>
+<script src="./react.development/packages/react/src/ReactMutableSource.js"></script>
+<script src="./react.development/packages/scheduler/src/SchedulerFeatureFlags.js"></script>
+<script src="./react.development/packages/scheduler/src/forks/SchedulerHostConfig.default.js"></script>
+<script src="./react.development/packages/scheduler/src/SchedulerMinHeap.js"></script>
+<script src="./react.development/packages/scheduler/src/SchedulerPriorities.js"></script>
+<script src="./react.development/packages/scheduler/src/SchedulerProfiling.js"></script>
+<script src="./react.development/packages/scheduler/src/Scheduler.js"></script>
+<script src="./react.development/packages/scheduler/index.js"></script>
+<script src="./react.development/$$umd/line-number-3116.js"></script>
+<script src="./react.development/packages/scheduler/src/Tracing.js"></script>
+<script src="./react.development/packages/scheduler/src/TracingSubscriptions.js"></script>
+<script src="./react.development/packages/scheduler/tracing.js"></script>
+<script src="./react.development/$$umd/line-number-3459.js"></script>
+<script src="./react.development/packages/react/src/forks/ReactSharedInternals.umd.js"></script>
+<script src="./react.development/packages/react/src/BadMapPolyfill.js"></script>
+<script src="./react.development/packages/react/src/ReactStartTransition.js"></script>
+<script src="./react.development/packages/react/src/React.js"></script>
+<script src="./react.development/$$umd/line-number-3556.js"></script>
+    </head>
+    <body>
+        <iframe id="react-dom" src="./dependency-react-dom.html" frameborder="0"></iframe>
+        <script>
+            const domReactDOM = document.querySelector('#react-dom')
+            domReactDOM.contentWindow.onload = () => {
+                window.parent.run(React, domReactDOM.contentWindow.ReactDOM)
+            }
+        </script>
+    </body>
+    </html>
