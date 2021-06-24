@@ -14,12 +14,12 @@
 ![](https://terry-su.github.io/debug-react-source-code/assets/images/release-download.png)
 
 版本列表（持续更新）：
-* [debug-react-17.0.2](https://github.com/Terry-Su/debug-react-source-code/releases/tag/release-debug-react-17.0.2)
-* [debug-react-17.0.1](https://github.com/Terry-Su/debug-react-source-code/releases/tag/release-debug-react-17.0.1)
-* [debug-react-17.0.0](https://github.com/Terry-Su/debug-react-source-code/releases/tag/release-debug-react-17.0.0)
-* [debug-react-16.14.0](https://github.com/Terry-Su/debug-react-source-code/releases/tag/release-debug-react-16.14.0)
-* [debug-react-16.13.1](https://github.com/Terry-Su/debug-react-source-code/releases/tag/release-debug-react-16.13.1)
-*  [debug-react-16.6.0](https://github.com/Terry-Su/debug-react-source-code/releases/tag/release-debug-react-16.6.0)
+* [debug-react-source-code-17.0.2](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v17.0.2)
+* [debug-react-source-code-17.0.1](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v17.0.1)
+* [debug-react-source-code-17.0.0](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v17.0.0)
+* [debug-react-source-code-16.14.0](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v16.14.0)
+* [debug-react-source-code-16.13.1](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v16.13.1)
+* [debug-react-source-code-16.6.0](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v16.6.0)
 
 2 . 将压缩包解压后，用vscode打开该文件夹。vscode需安装[Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)插件，用于在vscode对源码添加断点
 
