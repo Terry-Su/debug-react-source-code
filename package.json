@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cd react-16.6.0 & http-server -p 6002"
+    "start": "cd ./react-16.6.0 && http-server -p 6001"
   },
   "repository": {
     "type": "git",
