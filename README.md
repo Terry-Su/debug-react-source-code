@@ -11,7 +11,7 @@
 使用步骤：
 
 1 . 在[Releases](https://github.com/Terry-Su/debug-react-source-code/releases)中选择要下载的版本。
-![](https://terry-su.github.io/debug-react-source-code/assets/images/release-download.png)
+![](https://terry-su.github.io/debug-react-source-code/assets/images/release-download-hint.png)
 
 版本列表（持续更新）：
 * [debug-react-source-code-17.0.2](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v17.0.2)
