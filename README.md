@@ -79,7 +79,7 @@ Version list（Update continuously）：
 * [debug-react-source-code-16.13.1](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v16.13.1)
 * [debug-react-source-code-16.6.0](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v16.6.0)
 
-2 . Unzip compressed file，then open folder using vscode。vscode need to install extension:[Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)，for adding breakpoints on source codes in vscode.
+2 . Unzip compressed file，then open folder using vscodevscode need to install extension:[Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)，for adding breakpoints on source codes in vscode.
 
 3 . After installing dependencies, start service
 ```
