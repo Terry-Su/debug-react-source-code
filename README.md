@@ -71,7 +71,7 @@ Usage Steps：
 1 . Select version to download at [Releases](https://github.com/Terry-Su/debug-react-source-code/releases)。
 ![](https://terry-su.github.io/debug-react-source-code/assets/images/release-download-hint.png)
 
-Versions list（Update continuously）：
+Version list（Update continuously）：
 * [debug-react-source-code-17.0.2](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v17.0.2)
 * [debug-react-source-code-17.0.1](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v17.0.1)
 * [debug-react-source-code-17.0.0](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v17.0.0)
