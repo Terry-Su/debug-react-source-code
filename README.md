@@ -1,3 +1,5 @@
+[中文](https://github.com/Terry-Su/debug-react-source-code)  | [English](https://github.com/Terry-Su/debug-react-source-code#quick-start)
+
 > 如果这个项目对你有帮助，欢迎**点个Star支持作者！**
 
 ## 快速使用
@@ -51,3 +53,60 @@ npm start
 
 ## 实现原理
 [“另辟蹊径搭建阅读React源码调试环境-支持所有React版本断点调试细分文件”](https://terry-su.github.io/cn/debug-react-source-code-using-special-method)
+
+---
+---
+---
+
+## Quick Start
+### Method 1: Debug Online
+![](https://terry-su.github.io/debug-react-source-code/example/assets/example-17.0.2.png)
+Visit Url：https://terry-su.github.io/debug-react-source-code/example/react-17.0.2
+
+
+### （Recommended）Method 2：Download Corresponding Files for Debugging Source Codes 
+The advantage is that you can modify the source code, such as adding comments to it.
+Usage Steps：
+
+1 . Select version to download at [Releases](https://github.com/Terry-Su/debug-react-source-code/releases)。
+![](https://terry-su.github.io/debug-react-source-code/assets/images/release-download-hint.png)
+
+Versions list（Update continuously）：
+* [debug-react-source-code-17.0.2](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v17.0.2)
+* [debug-react-source-code-17.0.1](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v17.0.1)
+* [debug-react-source-code-17.0.0](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v17.0.0)
+* [debug-react-source-code-16.14.0](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v16.14.0)
+* [debug-react-source-code-16.13.1](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v16.13.1)
+* [debug-react-source-code-16.6.0](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v16.6.0)
+
+2 . Unzip compressed file，then open folder using vscode。vscode need to install extension:[Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)，for adding breakpoints on source codes in vscode.
+
+3 . After installing dependencies, start service
+```
+npm install
+```
+```
+npm start
+```
+
+4 . Add breakpoints on source codes, then just press F5 to start debugging
+![](https://terry-su.github.io/assets/blogs/debug-react-source-code-in-special-way/vscode-example.png)
+
+## Directory Structure
+Directory structure is：
+```
+/react.development/
+/react-dom.development/
+/babel.js
+/dependency-main.html
+/dependency-react.html
+/dependency-react-dom.html
+/index.html
+/index.js
+```
+notice `index.js` is the entry file for debugging.
+
+
+## How does this work
+> Maybe you need google translate. 
+[“Create an environment for reading and debugging the React source code in a different way - support all React version breakpoints debugging subdivision files”](https://terry-su.github.io/cn/debug-react-source-code-using-special-method)
