@@ -1,4 +1,4 @@
-[中文](https://github.com/Terry-Su/debug-react-source-code#快速使用)  | [English](https://github.com/Terry-Su/debug-react-source-code#quick-start)
+[English Version Click Here](https://github.com/Terry-Su/debug-react-source-code#quick-start)
 
 > 如果这个项目对你有帮助，欢迎**点个Star支持作者！**
 
