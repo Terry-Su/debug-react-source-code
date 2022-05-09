@@ -1,0 +1,1 @@
+  var assign = Object.assign;
