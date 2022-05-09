@@ -16,6 +16,7 @@
 ![](https://terry-su.github.io/debug-react-source-code/assets/images/release-download-hint.png)
 
 版本列表（持续更新）：
+* [debug-react-source-code-18.1.0](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v18.1.0)
 * [debug-react-source-code-18.0.0](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v18.0.0)
 * [debug-react-source-code-17.0.2](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v17.0.2)
 * [debug-react-source-code-17.0.1](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v17.0.1)
@@ -73,6 +74,7 @@ Usage Steps：
 ![](https://terry-su.github.io/debug-react-source-code/assets/images/release-download-hint.png)
 
 Version list（Update continuously）：
+* [debug-react-source-code-18.1.0](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v18.1.0)
 * [debug-react-source-code-18.0.0](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v18.0.0)
 * [debug-react-source-code-17.0.2](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v17.0.2)
 * [debug-react-source-code-17.0.1](https://github.com/Terry-Su/debug-react-source-code/releases/tag/v17.0.1)
