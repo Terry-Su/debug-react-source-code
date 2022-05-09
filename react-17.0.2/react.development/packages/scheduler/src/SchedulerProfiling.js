@@ -1,2 +1,0 @@
-  function markTaskErrored(task, ms) {
-  }
